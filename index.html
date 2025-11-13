@@ -1,1 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sri Eshwar College of Engineering</title>
+  <style>
+    :root{
+      --accent:#0b5cff;
+      --muted:#4b5563;
+      --bg:#f9fbff;
+      --card:#ffffff;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:#111;line-height:1.5}
 
+    /* HEADER */
+    header{position:sticky;top:0;z-index:50;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{font-weight:800;color:var(--accent);font-size:1.2rem}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600;transition:color 0.2s}
+    nav a:hover{color:var(--accent)}
+
+    /* SEARCH BAR */
+    .search-bar{margin-left:20px;display:flex;align-items:center;gap:8px}
+    .search-bar input{padding:8px 10px;border:1px solid #dbeafe;border-radius:8px;width:200px;outline:none}
+
+    /* HERO */
+    .hero{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:48px 20px;color:#fff;position:relative;background-size:cover;background-position:center;background-image:linear-gradient(rgba(0,0,50,0.5), rgba(0,0,80,0.6)), url('image.png');}
+    .hero .content{z-index:2;max-width:900px}
+    .hero h1{font-size:2.5rem;margin-bottom:12px;color:white}
+    .hero p{color:#e0e7ff;margin-bottom:20px}
+    .btn{display:inline-block;padding:10px 20px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;transition:background 0.3s}
+    .btn:hover{background:#0847cc}
+
+    /* MAIN */
+    main{max-width:1100px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:1fr 350px;gap:24px}
+    @media(max-width:900px){main{grid-template-columns:1fr}}
+
+    h2{color:var(--accent);margin-bottom:10px}
+    .small{color:var(--muted);font-size:0.9rem}
+
+    /* Departments */
+    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:14px}
+    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:12px;padding:18px;transition:transform 0.2s, box-shadow 0.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,0,0,0.05)}
+    .card h3{margin-bottom:6px;color:var(--accent)}
+    .card p{color:var(--muted);font-size:0.95rem}
+
+    /* Enroll Panel */
+    .panel{background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.06);padding:18px}
+    label{display:block;margin:10px 0 6px;font-weight:600;color:#111}
+    input[type="text"],input[type="email"],select{width:100%;padding:10px;border:1px solid #c7d2fe;border-radius:8px;outline:none}
+    input:focus,select:focus{border-color:var(--accent)}
+
+    footer{max-width:1100px;margin:40px auto;text-align:center;padding:22px 18px;color:var(--muted);font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">Sri Eshwar College of Engineering</div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search department..." />
+      </div>
+      <nav>
+        <a href="#departments">Departments</a>
+        <a href="#enroll">Enroll</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="content">
+      <h1>Welcome to Sri Eshwar College of Engineering</h1>
+      <p>Quality engineering education across multiple departments — CCSE, ECE, IT, EEE, AIML, AIDS. Explore courses and enroll online.</p>
+      <a class="btn" href="#enroll">Enroll Now</a>
+    </div>
+  </section>
+
+  <main>
+    <div>
+      <section id="departments">
+        <h2>Our Departments</h2>
+        <p class="small">We offer courses across core engineering branches and modern specializations.</p>
+
+        <div class="cards" id="deptCards">
+          <div class="card"><h3>CCSE</h3><p>Computer Science & Software Engineering — B.E / M.E programs, strong industry connect and projects.</p></div>
+          <div class="card"><h3>ECE</h3><p>Electronics & Communication Engineering — Embedded systems, VLSI, communication labs and research.</p></div>
+          <div class="card"><h3>IT</h3><p>Information Technology — Modern web, cloud, mobile and full-stack development courses.</p></div>
+          <div class="card"><h3>EEE</h3><p>Electrical & Electronics Engineering — Power systems, control, renewable energy labs.</p></div>
+          <div class="card"><h3>AIML</h3><p>Artificial Intelligence & Machine Learning — Data science, deep learning and AI projects.</p></div>
+          <div class="card"><h3>AIDS</h3><p>Applied Informatics & Data Science — Applied analytics, big data and visualization.</p></div>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:24px">
+        <h2>About the College</h2>
+        <p class="small">Sri Eshwar College of Engineering (SECE), located in Coimbatore, Tamil Nadu, is a premier institution dedicated to providing high-quality technical education and fostering innovation. Established with a vision to nurture future-ready engineers, SECE offers undergraduate and postgraduate programs in various disciplines including Computer Science, Electronics and Communication, Electrical and Electronics, Information Technology, Artificial Intelligence, and Data Science. The college emphasizes hands-on learning, research, and strong industry collaboration. With modern infrastructure, well-equipped laboratories, experienced faculty, and excellent placement opportunities, SECE empowers students to develop technical excellence, leadership skills, and a passion for continuous learning and innovation.</p>
+      </section>
+    </div>
+
+    <aside>
+      <div id="enroll" class="panel">
+        <h3 style="color:var(--accent)">Enroll in a Course</h3>
+        <p class="small">Fill your details to enroll. Submissions are stored locally in your browser for demo purposes.</p>
+
+        <form id="enrollForm">
+          <label for="name">Full name</label>
+          <input id="name" type="text" placeholder="Your full name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+
+          <label for="dept">Department</label>
+          <select id="dept">
+            <option value="CCSE">CCSE</option>
+            <option value="ECE">ECE</option>
+            <option value="IT">IT</option>
+            <option value="EEE">EEE</option>
+            <option value="AIML">AIML</option>
+            <option value="AIDS">AIDS</option>
+          </select>
+
+          <label for="course">Course / Subject</label>
+          <input id="course" type="text" placeholder="e.g., Intro to AI" />
+
+          <button type="submit" class="btn" style="margin-top:12px;width:100%">Submit</button>
+        </form>
+      </div>
+
+      <div class="panel" style="margin-top:12px">
+        <h4 style="color:var(--accent)">Contact</h4>
+        <p class="small" id="contact">Phone: +91 44 1234 5678<br/>Email: info@sece.edu.in</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Sri Eshwar College of Engineering — Designed by Suran Singh Dhami.
+  </footer>
+
+  <script>
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear();
+
+    // Filter departments
+    const searchInput = document.getElementById('searchInput');
+    const deptCards = document.getElementById('deptCards');
+    searchInput.addEventListener('input',()=>{
+      const q = searchInput.value.toLowerCase();
+      const cards = deptCards.querySelectorAll('.card');
+      cards.forEach(card=>{
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(q)?'block':'none';
+      });
+    });
+
+    // Simple local enroll demo
+    const form = document.getElementById('enrollForm');
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      alert('Enrollment saved locally (demo).');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
